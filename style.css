@@ -1,0 +1,226 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: url(assets/wallpaperflare.com_wallpaper.jpg); */
+    /* background-color: white; White background for the webpage */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.header {
+    position: absolute; /* Position it over the slideshow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height of the slideshow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    color: white; /* Text color */
+    text-align: center; /* Center text alignment */
+    z-index: 1; /* Stack above the slideshow */
+}
+
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Increased opacity for better contrast */
+    padding: 20px;
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.navbar {
+    position: absolute; /* Position navbar over the slideshow */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 20px; /* Space between links */
+    z-index: 2; /* Stack above the overlay */
+}
+
+.navbar a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    opacity: 1; /* Full visibility */
+    transition: opacity 0.3s, background-color 0.3s; /* Smooth transition on hover */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: transparent; /* No background initially */
+}
+
+.button {
+    background-color: #004d40; /* Button background color */
+}
+
+.button:hover {
+    background-color: #00796b; /* Button background on hover */
+}
+
+.top-corner-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 2; /* Ensure this is above the slideshow */
+}
+
+.top-left-home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.top-left-home-button a {
+    color: white;
+    text-decoration: none;
+    background-color: #004d40;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.top-left-home-button a:hover {
+    background-color: #00796b;
+}
+
+.top-corner-links a {
+    color: white;
+    text-decoration: none;
+    background-color: #004d40;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.top-corner-links a:hover {
+    background-color: #00796b;
+}
+
+.about-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.about-section img {
+    width: 80%;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.attractions-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.attraction-card {
+    display: inline-block;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.attraction-card:hover {
+    transform: scale(1.05);
+}
+
+.attraction-card img {
+    width: 100%;
+    height: auto;
+}
+
+.attraction-card h3 {
+    margin: 15px 0 10px;
+}
+
+.attraction-card p {
+    padding: 0 15px 15px;
+}
+
+.footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.events-section, .cuisine-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.event-card, .dish-card, .restaurant-card {
+    display: inline-block;
+    width: 300px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+}
+
+.event-card h3, .dish-card h3, .restaurant-card h3 {
+    margin: 15px;
+}
+
+.event-card p, .dish-card p, .restaurant-card p {
+    padding: 0 15px 15px;
+}
+
+.dish-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.slide {
+    position: absolute; /* Keep all slides in the same position */
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Start with hidden slides */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
+
+.slide.active {
+    opacity: 1; /* Make the active slide visible */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area */
+}
+
+.active {
+    animation: fade 1s ease-in-out ;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
