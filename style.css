@@ -3,19 +3,18 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent scrolling */
+    overflow-x: hidden;
     background: #ffffff;
 }
 body {
-    font-family: 'Open Sans', sans-serif; /* For body text */
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif; /* For headings */
+    font-family: 'Playfair Display', serif;
 }
 
 
-/* Header styling (unchanged) */
 .header {
     position: absolute;
     top: 0;
@@ -42,20 +41,20 @@ h1, h2, h3 {
 .header-overlay p {
     font-size: 1.2rem;
     margin-top: 15px;
-    color: #f0f0f0; /* Light color for readability */
-    line-height: 1.6; /* Improve readability */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
-    padding: 0 20px; /* Add padding for spacing */
-    max-width: 600px; /* Restrict width for better layout */
-    font-style: italic; /* Add a touch of elegance */
-    font-weight: 300; /* Lighter weight for sophistication */
-    border-left: 4px solid #00796b; /* Decorative border */
-    padding-left: 15px; /* Space between text and border */
+    color: #f0f0f0; 
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    padding: 0 20px; 
+    max-width: 600px; 
+    font-style: italic;
+    font-weight: 300;
+    border-left: 4px solid #00796b;
+    padding-left: 15px;
 }
 
 .explore-button {
     display: inline-block;
-    margin-top: 20px; /* Adds spacing between text and button */
+    margin-top: 20px;
     color: white;
     text-decoration: none;
     background-color: #004d40;
@@ -67,18 +66,18 @@ h1, h2, h3 {
 
 .explore-button:hover {
     background-color: #00796b;
-    transform: scale(1.05); /* Slight scaling effect on hover */
+    transform: scale(1.05); 
 }
 
 
 /* Navbar styling */
 .navbar {
-    position: fixed; /* Make navbar fixed on scroll */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    display: flex; /* Horizontal layout */
-    gap: 20px; /* Space between buttons */
-    z-index: 1000; /* Stack above the slideshow and other content */
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    display: flex; 
+    gap: 20px; 
+    z-index: 1000;
 }
 
 .navbar a {
@@ -93,17 +92,16 @@ h1, h2, h3 {
 
 .navbar a:hover {
     background-color: #00796b;
-    transform: scale(1.05); /* Slight scaling effect on hover */
+    transform: scale(1.05);
 }
 
 .top-left-home-button {
-    position: fixed; /* Ensure it stays in the top-left as you scroll */
+    position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 1001; /* Higher than other elements */
+    z-index: 1001;
 }
 
-/* Visit South Africa button styling */
 .top-left-home-button a {
     color: white;
     text-decoration: none;
@@ -116,10 +114,9 @@ h1, h2, h3 {
 
 .top-left-home-button a:hover {
     background-color: #00796b;
-    transform: scale(1.05); /* Slight scaling effect on hover */
+    transform: scale(1.05);
 }
 
-/* Other styles (unchanged) */
 .slideshow-container {
     position: relative;
     width: 100%;
@@ -156,7 +153,7 @@ h1, h2, h3 {
 
 .attractions-section {
     padding: 100px;
-    background-color: #e8f5e9; /* Light green background */
+    background-color: #e8f5e9;
     text-align: center;
 }
 
@@ -174,23 +171,23 @@ h1, h2, h3 {
     line-height: 1.6;
 }
 .attractions-description  {
-    font-size: 1.4rem; /* Slightly larger text for better readability */
-    line-height: 1.6; /* Increased line height for better spacing */
-    color: #555; /* A softer, darker gray for a more modern look */
-    margin-top: 40px; /* Space above the paragraph */
-    margin-bottom: 40px; /* Space below the paragraph */
-    text-align: justify; /* Justify text for a cleaner look */
-    padding: 25px; /* Padding inside the paragraph for better spacing */
-    border-left: 5px solid #00796b; /* Decorative left border */
-    background-color: rgba(240, 240, 240, 0.6); /* Light background color for contrast */
-    border-radius: 8px; /* Rounded corners for a softer look */
-    transition: transform 0.3s; /* Smooth transition for the hover effect */
+    font-size: 1.4rem; 
+    line-height: 1.6; 
+    color: #555;
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+    text-align: justify; 
+    padding: 25px; 
+    border-left: 5px solid #00796b; 
+    background-color: rgba(240, 240, 240, 0.6); 
+    border-radius: 8px; 
+    transition: transform 0.3s; 
     font-style: italic;
 }
 
 .attractions-description:hover {
-    transform: scale(1.02); /* Slight scale effect on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover for depth */
+    transform: scale(1.02); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -226,9 +223,10 @@ h1, h2, h3 {
     color: #555;
     padding: 0 15px 15px;
 }
+
 /* Footer Styling */
 .footer {
-    background-color: #004d40; /* Dark green background */
+    background-color: #004d40;
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -238,7 +236,7 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 400px;
 }
 
 .footer-logo a {
@@ -268,7 +266,7 @@ h1, h2, h3 {
 }
 
 .footer-links a:hover {
-    color: #b2dfdb; /* Light green on hover */
+    color: #b2dfdb;
 }  
 
 .footer-socials {
@@ -280,11 +278,11 @@ h1, h2, h3 {
 .footer-socials a img {
     width: 50px;
     height: 50px;
-    transition: transform 0.3s ease; /* Smooth transition for raising */
+    transition: transform 0.3s ease;
 }
 
 .footer-socials a:hover img {
-    transform: translateY(-5px); /* Raise the icon by 5px */
+    transform: translateY(-5px); 
 }
 
 .footer-bottom {
@@ -294,7 +292,6 @@ h1, h2, h3 {
     justify-content: center;
 }
 
-/* Responsive footer layout */
 @media (min-width: 600px) {
     .footer-content {
         flex-direction: row;
@@ -303,36 +300,32 @@ h1, h2, h3 {
 }
 
 /* Events Section */
-.events-section {
-    padding: 20px;
-    background-color: #e8f5e9; /* Light background for the section */
-}
 
 .events-section h2 {
     font-size: 2rem;
-    color: #004d40; /* Dark teal color for headers */
+    color: #004d40; 
     margin-bottom: 20px;
     text-align: center;
 }
 
 .events-section {
-    padding: 20px;
-    background-color: #e8f5e9; /* Light background for contrast */
+    padding: 75px;
+    background-color: #e8f5e9; 
 }
 
 .cards {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
-    justify-content: center; /* Center align cards horizontally */
-    gap: 20px; /* Space between cards */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
 }
 
 .event-card {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content within card */
-    width: 320px; /* Set a fixed width for each card */
-    height: auto; /* Allow height to adjust based on content */
+    align-items: center; 
+    width: 320px; 
+    height: auto;
     margin: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -347,20 +340,83 @@ h1, h2, h3 {
 
 .event-card img {
     width: 100%;
-    height: 180px; /* Fixed height for images */
-    object-fit: cover; /* Cover the card without stretching */
+    height: 180px;
+    object-fit: cover;
 }
 
 .event-card h3 {
     font-size: 1.5rem;
     color: #00796b;
     margin: 10px 0;
-    text-align: center; /* Center align text */
+    text-align: center;
 }
 
 .event-card p {
     font-size: 1rem;
     color: #555;
     padding: 0 15px 15px;
-    text-align: center; /* Center align text */
+    text-align: center; 
 }
+
+.cuisine-section {
+    padding: 60px;
+    background-color: #e8f5e9;
+}
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #00796b; 
+    font-size: 3rem;
+}
+
+.dish-card, .restaurant-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 320px; 
+    height: auto; 
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.dish-card:hover, .restaurant-card:hover {
+    transform: scale(1.05);
+}
+
+.dish-card img, .restaurant-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+}
+
+.dish-card h3, .restaurant-card h3 {
+    font-size: 1.5rem;
+    color: #00796b;
+    margin: 10px 0;
+    text-align: center; 
+}
+
+.dish-card p, .restaurant-card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px 15px;
+    text-align: center; 
+}
+.overview {
+    font-size: 1.3rem;
+    color: #333; 
+    margin: 15px 0;
+    padding: 30px 30px; 
+    text-align: center;
+    font-style: italic;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+
+}
+
