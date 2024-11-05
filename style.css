@@ -1,88 +1,109 @@
+/* Body styling (unchanged) */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background: url(assets/wallpaperflare.com_wallpaper.jpg); */
-    /* background-color: white; White background for the webpage */
-    overflow: hidden; /* Prevent scrolling */
+    overflow-x: hidden; /* Prevent scrolling */
+    background: #ffffff;
+}
+body {
+    font-family: 'Open Sans', sans-serif; /* For body text */
 }
 
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* For headings */
+}
+
+
+/* Header styling (unchanged) */
 .header {
-    position: absolute; /* Position it over the slideshow */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Full height of the slideshow */
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center text vertically */
-    align-items: center; /* Center text horizontally */
-    color: white; /* Text color */
-    text-align: center; /* Center text alignment */
-    z-index: 1; /* Stack above the slideshow */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 1;
 }
 
 .header-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Increased opacity for better contrast */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 10px; /* Optional rounded corners */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.header h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.header p {
+.header-overlay p {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 15px;
+    color: #f0f0f0; /* Light color for readability */
+    line-height: 1.6; /* Improve readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    padding: 0 20px; /* Add padding for spacing */
+    max-width: 600px; /* Restrict width for better layout */
+    font-style: italic; /* Add a touch of elegance */
+    font-weight: 300; /* Lighter weight for sophistication */
+    border-left: 4px solid #00796b; /* Decorative border */
+    padding-left: 15px; /* Space between text and border */
 }
 
+.explore-button {
+    display: inline-block;
+    margin-top: 20px; /* Adds spacing between text and button */
+    color: white;
+    text-decoration: none;
+    background-color: #004d40;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.explore-button:hover {
+    background-color: #00796b;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+
+/* Navbar styling */
 .navbar {
-    position: absolute; /* Position navbar over the slideshow */
+    position: fixed; /* Make navbar fixed on scroll */
     top: 20px; /* Distance from the top */
     right: 20px; /* Distance from the right */
-    display: flex; /* Flexbox for horizontal layout */
-    gap: 20px; /* Space between links */
-    z-index: 2; /* Stack above the overlay */
+    display: flex; /* Horizontal layout */
+    gap: 20px; /* Space between buttons */
+    z-index: 1000; /* Stack above the slideshow and other content */
 }
 
 .navbar a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    opacity: 1; /* Full visibility */
-    transition: opacity 0.3s, background-color 0.3s; /* Smooth transition on hover */
-    padding: 10px 20px; /* Button padding */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: transparent; /* No background initially */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #004d40;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.button {
-    background-color: #004d40; /* Button background color */
-}
-
-.button:hover {
-    background-color: #00796b; /* Button background on hover */
-}
-
-.top-corner-links {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 15px;
-    z-index: 2; /* Ensure this is above the slideshow */
+.navbar a:hover {
+    background-color: #00796b;
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
 .top-left-home-button {
-    position: absolute;
+    position: fixed; /* Ensure it stays in the top-left as you scroll */
     top: 20px;
     left: 20px;
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1001; /* Higher than other elements */
 }
 
+/* Visit South Africa button styling */
 .top-left-home-button a {
     color: white;
     text-decoration: none;
@@ -90,49 +111,97 @@ body {
     padding: 5px 15px;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .top-left-home-button a:hover {
     background-color: #00796b;
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
-.top-corner-links a {
-    color: white;
-    text-decoration: none;
-    background-color: #004d40;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+/* Other styles (unchanged) */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
 }
 
-.top-corner-links a:hover {
-    background-color: #00796b;
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.about-section {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f5f5f5;
+.slide.active {
+    opacity: 1;
 }
 
-.about-section img {
-    width: 80%;
-    border-radius: 15px;
-    margin-top: 20px;
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.active {
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .attractions-section {
-    padding: 20px;
+    padding: 100px;
+    background-color: #e8f5e9; /* Light green background */
     text-align: center;
 }
 
+.attractions-section h2 {
+    font-size: 2.5rem;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.attractions-description {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+.attractions-description  {
+    font-size: 1.4rem; /* Slightly larger text for better readability */
+    line-height: 1.6; /* Increased line height for better spacing */
+    color: #555; /* A softer, darker gray for a more modern look */
+    margin-top: 40px; /* Space above the paragraph */
+    margin-bottom: 40px; /* Space below the paragraph */
+    text-align: justify; /* Justify text for a cleaner look */
+    padding: 25px; /* Padding inside the paragraph for better spacing */
+    border-left: 5px solid #00796b; /* Decorative left border */
+    background-color: rgba(240, 240, 240, 0.6); /* Light background color for contrast */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    transition: transform 0.3s; /* Smooth transition for the hover effect */
+    font-style: italic;
+}
+
+.attractions-description:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover for depth */
+}
+
+
 .attraction-card {
     display: inline-block;
+    width: 300px;
+    height: 360px;
     margin: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: white;
     overflow: hidden;
     transition: transform 0.3s;
 }
@@ -143,84 +212,155 @@ body {
 
 .attraction-card img {
     width: 100%;
-    height: auto;
+    height: 170px;
 }
 
 .attraction-card h3 {
+    font-size: 1.5rem;
+    color: #00796b;
     margin: 15px 0 10px;
 }
 
 .attraction-card p {
+    font-size: 1rem;
+    color: #555;
     padding: 0 15px 15px;
 }
-
+/* Footer Styling */
 .footer {
-    background-color: #004d40;
+    background-color: #004d40; /* Dark green background */
     color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-.events-section, .cuisine-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #f5f5f5;
 }
 
-.event-card, .dish-card, .restaurant-card {
-    display: inline-block;
-    width: 300px;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-logo a:hover {
+    color: #b2dfdb;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #b2dfdb; /* Light green on hover */
+}  
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-socials a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease; /* Smooth transition for raising */
+}
+
+.footer-socials a:hover img {
+    transform: translateY(-5px); /* Raise the icon by 5px */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #b2dfdb;
+    justify-content: center;
+}
+
+/* Responsive footer layout */
+@media (min-width: 600px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Events Section */
+.events-section {
+    padding: 20px;
+    background-color: #e8f5e9; /* Light background for the section */
+}
+
+.events-section h2 {
+    font-size: 2rem;
+    color: #004d40; /* Dark teal color for headers */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.events-section {
+    padding: 20px;
+    background-color: #e8f5e9; /* Light background for contrast */
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: center; /* Center align cards horizontally */
+    gap: 20px; /* Space between cards */
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content within card */
+    width: 320px; /* Set a fixed width for each card */
+    height: auto; /* Allow height to adjust based on content */
     margin: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     background-color: white;
-}
-
-.event-card h3, .dish-card h3, .restaurant-card h3 {
-    margin: 15px;
-}
-
-.event-card p, .dish-card p, .restaurant-card p {
-    padding: 0 15px 15px;
-}
-
-.dish-card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-}
-
-.slideshow-container {
-    position: relative;
-    width: 100%;
     overflow: hidden;
-    height: 100vh;
+    transition: transform 0.3s;
 }
 
-.slide {
-    position: absolute; /* Keep all slides in the same position */
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-card img {
     width: 100%;
-    height: 100%;
-    opacity: 0; /* Start with hidden slides */
-    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    height: 180px; /* Fixed height for images */
+    object-fit: cover; /* Cover the card without stretching */
 }
 
-.slide.active {
-    opacity: 1; /* Make the active slide visible */
+.event-card h3 {
+    font-size: 1.5rem;
+    color: #00796b;
+    margin: 10px 0;
+    text-align: center; /* Center align text */
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images cover the area */
-}
-
-.active {
-    animation: fade 1s ease-in-out ;
-}
-
-@keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.event-card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px 15px;
+    text-align: center; /* Center align text */
 }
