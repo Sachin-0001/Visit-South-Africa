@@ -6,53 +6,8 @@
     <title>South African Foods</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-        .buttons {
-            margin-bottom: 20px;
-        }
-
-        button {
-            margin: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        .food-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .food-item {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 250px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .food-item img {
-            width: 100%;
-            height: auto;
-        }
-
-        .food-details {
-            padding: 10px;
-        }
-
-        .spice-level {
-            font-weight: bold;
-            color: #d9534f;
-        }
-    </style> -->
 </head>
 <body>
     <div class="top-left-home-button">
@@ -60,23 +15,23 @@
     </div>
 
     <div class="navbar">
-        <a href="index.html#attractions" class="button">About</a>
+        <a href="about.html" class="button">About</a>
         <a href="events.html" class="button">Events</a>
         <a href="food.html" class="button">Cuisine🍽️</a>
     </div>
-    <h1>Explore South African Foods</h1>
-    <div class="buttons">
+    <h1 data-aos="fade-up" data-aos-duration="1000">Explore South African Foods</h1>
+    <div class="buttons" data-aos="fade-up" data-aos-duration="1000">
         <button onclick="filterFood('all')">All</button>
         <button onclick="filterFood('veg')">Veg</button>
         <button onclick="filterFood('nonveg')">Non-Veg</button>
         <button onclick="filterFood('seafood')">Seafood</button>
     </div>
-    <div id="foodContainer" class="food-container"></div>
+    <div id="foodContainer" class="food-container" data-aos="fade-up" data-aos-duration="1000"></div>
 
-    <section id="restaurants" class="cuisine-section">
-        <h2>Top Restaurants in South Africa</h2>
-        <p class="overview">Embark on a culinary journey through South Africa's...</p>
-        <div class="cards">
+    <section id="restaurants" class="cuisine-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2 data-aos="fade-up" data-aos-duration="1000">Top Restaurants in South Africa</h2>
+        <p class="overview" data-aos="fade-up" data-aos-duration="1000">Embark on a culinary journey through South Africa's...</p>
+        <div class="cards" data-aos="fade-up" data-aos-duration="1000">
             <a href="https://ttkfledgelings.co.za/home/">
               <div class="restaurant-card">
                 <h3>The Test Kitchen</h3>
@@ -95,13 +50,21 @@
             </a>
         </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
                 <a href="index.html">South Africa Tourism</a>
             </div>
             <div class="footer-links">
-                <a href="index.html#attractions">About</a>
+                <a href="about.html">About</a>
                 <a href="events.html">Events</a>
                 <a href="food.html">Cuisine</a>
             </div>
